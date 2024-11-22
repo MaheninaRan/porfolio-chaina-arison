@@ -1,0 +1,84 @@
+.ribbon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+.ribbon i{
+  margin-left: 10px;
+}
+.ribbon {
+  --r: .8em;
+  border-block: .5em solid #0000;
+  padding-inline: calc(var(--r) + .25em) .5em;
+  line-height: 1.8;
+  clip-path: polygon(0 0,100% 0,100% 100%,0 100%,0 calc(100% - .25em),var(--r) 50%,0 .25em);
+  background:
+  radial-gradient(.2em 50% at right,#000a,#0000) border-box,
+  #f7bc61 padding-box;
+  width: fit-content;
+}
+
+@media(max-width:595px){
+  .ribbon {
+    width: 100%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  display: inline-block;
+  animation: rotate 1s linear;
+}
+
+.wow.rotate {
+  visibility: hidden;
+}
+
+.wow.rotate[data-wow-duration] {
+  visibility: visible;
+}
+
+
+.objectif-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.profil .wow {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.h_separator {
+  width: 50px;
+  height: 3px;
+  background-color: #000000;
+  margin: 10px auto;
+}
+
+.objectif-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.objectif-description p {
+  margin: 0;
+}

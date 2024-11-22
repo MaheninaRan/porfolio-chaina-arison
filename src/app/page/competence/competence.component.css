@@ -1,0 +1,75 @@
+.ribbon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+.ribbon i{
+  margin-left: 10px;
+}
+.ribbon {
+  --r: .8em;
+  border-block: .5em solid #0000;
+  padding-inline: calc(var(--r) + .25em) .5em;
+  line-height: 1.8;
+  clip-path: polygon(0 0,100% 0,100% 100%,0 100%,0 calc(100% - .25em),var(--r) 50%,0 .25em);
+  background:
+  radial-gradient(.2em 50% at right,#000a,#0000) border-box,
+  #f7bc61 padding-box;
+  width: fit-content;
+}
+@media(max-width:595px){
+  .ribbon {
+    width: 100%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  display: inline-block;
+  animation: rotate 1s linear;
+}
+
+.wow.rotate {
+  visibility: hidden;
+}
+
+.wow.rotate[data-wow-duration] {
+  visibility: visible;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skills-list li span {
+  width: 200px; /* Ajuste la largeur selon le besoin */
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  width: 200px; /* Ajuste la largeur pour la barre */
+  margin-left: 10px;
+}
+
+.progress {
+  background-color: #ff9100;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
